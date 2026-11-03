@@ -1,6 +1,8 @@
 # BLE Clipboard Homebrew Tap
 
-Native macOS clipboard bridge to a Flipper Zero USB keyboard over Bluetooth LE.
+Native macOS clipboard and macro companion for a Flipper Zero USB keyboard and
+mouse over Bluetooth LE. The matching Mac and Flipper apps are independent of
+Ducker.
 
 ```sh
 brew tap otcan/ble-clipboard
@@ -9,14 +11,17 @@ brew install --cask otcan/ble-clipboard/ble-clipboard
 
 macOS 14 Sonoma or later; universal Apple Silicon and Intel app.
 
-The Flipper application is installed separately. Download `ble_clipboard.fap`
-from the matching [release](https://github.com/otcan/ble-clipboard/releases) and
-put it at `/ext/apps/Bluetooth/ble_clipboard.fap` with qFlipper. The initial FAP
-targets firmware 1.5.1, API 88.2.
+The current release is [0.5.2](https://github.com/otcan/ble-clipboard/releases/tag/v0.5.2).
+The Flipper application is installed separately. Download the matching
+`ble_clipboard.fap` from that release and put it at
+`/ext/apps/Bluetooth/ble_clipboard.fap` with qFlipper. Open Apps > Bluetooth >
+BLE Clipboard. The release FAP targets firmware 1.5.1, API 88.2; update both apps
+together.
 
-Early releases are ad-hoc signed, not Apple-notarized. This tap preserves macOS
-quarantine and does not bypass Gatekeeper. Review the source before approving
-a first launch in Privacy & Security.
+The 0.5.2 Mac app is Developer ID signed, Apple-notarized and ticket-stapled.
+The public downloads and SHA-256 checksums have been verified. This tap preserves
+macOS quarantine and does not bypass Gatekeeper. Historical 0.1.0 assets remain
+ad-hoc signed and unchanged.
 
 Source, documentation, tests, and security notes:
 [otcan/ble-clipboard](https://github.com/otcan/ble-clipboard).
