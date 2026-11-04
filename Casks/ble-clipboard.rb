@@ -1,6 +1,6 @@
 cask "ble-clipboard" do
-  version "0.5.2"
-  sha256 "13b044ad803ad77ba2d315a38a6e6a70f2bf6b75f4d1e7330ab8d7c9c6a631c8"
+  version "0.5.3"
+  sha256 "2199245fd73e8b77b896a484127fd3c2507f1a1913df1e66b6d5d012a193abb4"
 
   url "https://github.com/otcan/ble-clipboard/releases/download/v#{version}/BLE-Clipboard-#{version}-universal.zip"
   name "BLE Clipboard"
