@@ -12,8 +12,12 @@ brew install --cask otcan/ble-clipboard/ble-clipboard
 
 macOS 14 Sonoma or later; universal Apple Silicon and Intel app.
 
-No Homebrew? [Download the Mac ZIP](https://github.com/otcan/ble-clipboard/releases/download/v0.5.3/BLE-Clipboard-0.5.3-universal.zip),
+No Homebrew? [Download the Mac ZIP](https://github.com/otcan/ble-clipboard/releases/download/v0.5.4/BLE-Clipboard-0.5.4-universal.zip),
 unzip it and move the app to Applications.
+
+Homebrew is Mac-only. Windows users can download the matching
+[unsigned x64 beta installer or portable ZIP](https://github.com/otcan/ble-clipboard/releases/tag/v0.5.4)
+with Python bundled. The Windows companion includes the full macro editor.
 
 ## Install the Flipper Companion
 
@@ -26,7 +30,7 @@ brew install --cask qflipper
 
 Or [download qFlipper from Flipper's official site](https://flipper.net/pages/downloads).
 
-1. [Download ble_clipboard.fap](https://github.com/otcan/ble-clipboard/releases/download/v0.5.3/ble_clipboard.fap).
+1. [Download ble_clipboard.fap](https://github.com/otcan/ble-clipboard/releases/download/v0.5.4/ble_clipboard.fap).
 2. Leave the Flipper at its home screen with a microSD card inserted and connect
    it by USB. In qFlipper's File Manager, upload the FAP to **SD Card > apps > Bluetooth**.
    Create the folders if needed; the device path is `/ext/apps/Bluetooth/ble_clipboard.fap`.
@@ -35,21 +39,27 @@ Or [download qFlipper from Flipper's official site](https://flipper.net/pages/do
 qFlipper can be closed after copying the file. A microSD card reader is also an
 option; see the [full setup guide](https://github.com/otcan/ble-clipboard#install-the-matching-pair).
 The release FAP targets official firmware 1.5.1 / API 88.2. Install the matching
-0.5.3 pair and update both apps together.
+0.5.4 desktop and Flipper apps, and update them together. The USB target does
+not need either desktop companion installed.
 
-[Screenshots of both apps](https://github.com/otcan/ble-clipboard#screenshots) &middot;
-[Release notes and checksums](https://github.com/otcan/ble-clipboard/releases/tag/v0.5.3)
+[Screenshots](https://github.com/otcan/ble-clipboard#screenshots) &middot;
+[Release notes and checksums](https://github.com/otcan/ble-clipboard/releases/tag/v0.5.4)
 
 ## Current Release
 
-0.5.3 fixes SD initialization for saving snapshots and transfers larger than
-4 KiB. No SD formatting or snapshot migration is needed; the 20-slot limit is
-unchanged.
+0.5.4 adds persistent keyboard settings on Flipper, reconnect synchronization,
+Fast/Slow/Variable/Custom typing pace, and a full Windows x64 beta companion.
+Saved snapshots stay unchanged when using the device-selected layout for local
+runs. The 20-slot limit is unchanged.
 
-The 0.5.3 Mac app is Developer ID signed, Apple-notarized and ticket-stapled.
+The 0.5.4 Mac app is Developer ID signed, Apple-notarized and ticket-stapled.
 The public downloads and SHA-256 checksums have been verified. This tap preserves
 macOS quarantine and does not bypass Gatekeeper. Historical 0.1.0 assets remain
 ad-hoc signed and unchanged.
+
+Automated desktop, protocol, storage, installer and UI checks passed. Physical
+Windows BLE/USB, focus/layout and long-run testing remain unverified; see the
+[validation record](https://github.com/otcan/ble-clipboard/blob/v0.5.4/docs/HARDWARE-VALIDATION.md).
 
 Source, documentation, tests, and security notes:
 [otcan/ble-clipboard](https://github.com/otcan/ble-clipboard).
